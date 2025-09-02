@@ -1,0 +1,1 @@
+import './Routes/registro.js'
