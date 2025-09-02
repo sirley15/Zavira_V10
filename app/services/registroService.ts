@@ -64,15 +64,15 @@ export default class RegistroService {
     if (!passwordValida) return 'La contraseña es incorrecta'
 
     const token = jwt.sign(
-      {
-        id: respuesta.id_institucion,
-        correo: respuesta.correo,
-        rol: 'Administrador',
-        timestamp: Date.now(),
-      },
-      SECRET,
-      { expiresIn: '24h' }
-    )
+  {
+    id_institucion: respuesta.id_institucion, 
+    correo: respuesta.correo,
+    rol: 'Administrador',
+    timestamp: Date.now(),
+  },
+  SECRET,
+  { expiresIn: '24h' }
+)
 
     return {
       mensaje: 'Login exitoso',

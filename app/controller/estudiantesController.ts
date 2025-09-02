@@ -62,7 +62,7 @@ export default class EstudiantesController {
             id_institucion: Number(id_institucion),
           }
 
-          // 👉 Usamos el service para registrar estudiante (así mantenemos la lógica centralizada)
+          //  Usamos el service para registrar estudiante (así mantenemos la lógica centralizada)
           const resultado = await registroService.registrarEstudiante(estudianteCSV)
 
           // Guardamos lo creado
